@@ -12,7 +12,7 @@ except Exception as e:print('[RAG] load skipped:',e)
 def live_web(q):
  from crawler.web import search_sources
  return search_sources(q,ROOT_URLS)
-register_chat(gemma,rag,live_web if LIVE_WEB_ENABLED else None,get_weather);register_health(gemma,rag)
+app.register_blueprint(register_chat(gemma,rag,live_web if LIVE_WEB_ENABLED else None,get_weather));app.register_blueprint(register_health(gemma,rag))
 @app.post('/api/index/build')
 def build_index():
  try:return jsonify({'status':'ok','chunks':rag.build()})

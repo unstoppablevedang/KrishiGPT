@@ -6,4 +6,3 @@ pypdf>=5.0
 numpy>=1.26
 sentence-transformers>=3.0
 faiss-cpu>=1.8
-llama-cpp-python>=0.3
