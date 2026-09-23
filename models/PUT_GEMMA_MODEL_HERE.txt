@@ -1,0 +1,1 @@
+Put Gemma 3 4B Instruct Q4_K_M GGUF here, or use LLAMA_SERVER_URL.
