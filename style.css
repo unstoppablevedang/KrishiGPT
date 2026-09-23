@@ -1,0 +1,437 @@
+/* =================================
+   BASIC SETTINGS
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+html {
+    overflow-y: auto;
+}
+
+body {
+    background: #f7faf5;
+    color: #333;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+    background: white;
+
+    padding: 30px 45px 30px;
+
+    border-bottom: 1px solid #e1e1e1;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #176b38;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   CITY SECTION
+================================= */
+
+.city-row {
+    display: flex;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* CITY INPUT */
+
+.city-input {
+    flex: 1;
+
+    height: 55px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 18px;
+
+    padding: 0 22px;
+
+    font-size: 20px;
+
+    outline: none;
+
+    color: #333;
+
+    background: white;
+}
+
+
+.city-input::placeholder {
+    color: #929292;
+}
+
+
+.city-input:focus {
+    border-color: #3c9551;
+}
+
+
+/* CITY BUTTON */
+
+.city-button {
+    width: 170px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: #3c9551;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.city-button:hover {
+    background: #307d43;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+    margin-top: 17px;
+
+    font-size: 21px;
+
+    color: #68726b;
+}
+
+
+/* =================================
+   MAIN AREA
+================================= */
+
+.main {
+    min-height: 500px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 65px 30px 170px;
+}
+
+
+/* PLANT */
+
+.plant {
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: #e5f1e3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 55px;
+
+    margin-bottom: 35px;
+}
+
+
+/* MAIN QUESTION */
+
+.question {
+    font-size: 30px;
+
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    max-width: 850px;
+
+    color: #444;
+}
+
+
+/* =================================
+   AI RESPONSE
+================================= */
+
+.response {
+    display: none;
+
+    width: 700px;
+
+    max-width: 90%;
+
+    margin-top: 30px;
+
+    margin-bottom: 40px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    text-align: left;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =================================
+   BOTTOM CHAT BAR
+================================= */
+
+.chat {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+    padding: 12px 25px;
+
+    display: flex;
+
+    gap: 18px;
+
+    z-index: 1000;
+}
+
+
+/* QUESTION INPUT */
+
+.chat-input {
+    flex: 1;
+
+    height: 55px;
+
+    background: #202020;
+
+    color: white;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 18px;
+
+    padding: 0 22px;
+
+    font-size: 20px;
+}
+
+
+.chat-input::placeholder {
+    color: #aaa;
+}
+
+
+/* SEND BUTTON */
+
+.send-button {
+    width: 120px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: #3c9551;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.send-button:hover {
+    background: #307d43;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 25px 20px 25px;
+    }
+
+
+    .logo {
+        font-size: 36px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .city-row {
+        gap: 10px;
+    }
+
+
+    .city-input {
+        height: 50px;
+
+        padding: 0 16px;
+
+        font-size: 17px;
+
+        border-radius: 16px;
+    }
+
+
+    .city-button {
+        width: 120px;
+
+        height: 50px;
+
+        font-size: 16px;
+
+        border-radius: 16px;
+    }
+
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+
+    .main {
+        padding: 55px 20px 150px;
+    }
+
+
+    .plant {
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 45px;
+    }
+
+
+    .question {
+        font-size: 25px;
+    }
+
+
+    .description {
+        font-size: 19px;
+    }
+
+
+    .response {
+        width: 95%;
+
+        font-size: 17px;
+
+        padding: 20px;
+    }
+
+
+    .chat {
+        padding: 10px;
+
+        gap: 8px;
+    }
+
+
+    .chat-input {
+        height: 50px;
+
+        padding: 0 16px;
+
+        font-size: 16px;
+
+        border-radius: 16px;
+    }
+
+
+    .send-button {
+        width: 85px;
+
+        height: 50px;
+
+        font-size: 17px;
+
+        border-radius: 16px;
+    }
+
+}

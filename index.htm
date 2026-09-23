@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KrishiGPT</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            KrishiGPT
+        </div>
+
+        <!-- CITY -->
+        <div class="city-row">
+
+            <input
+                type="text"
+                id="cityInput"
+                class="city-input"
+                placeholder="Enter your city"
+            >
+
+            <button
+                id="cityButton"
+                class="city-button"
+            >
+                Set city
+            </button>
+
+        </div>
+
+        <div class="subtitle">
+            Weather-aware agricultural guidance
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <div class="plant">
+            🌱
+        </div>
+
+        <div class="question">
+            How can I help with your farm?
+        </div>
+
+        <div class="description">
+            Ask about crops, planting, irrigation, soil,
+            pests, or sustainable farming practices.
+        </div>
+
+        <!-- RESPONSE -->
+        <div id="response" class="response"></div>
+
+    </main>
+
+
+    <!-- CHAT BAR -->
+    <div class="chat">
+
+        <input
+            type="text"
+            id="questionInput"
+            class="chat-input"
+            placeholder="Ask KrishiGPT anything about farming..."
+        >
+
+        <button
+            id="sendButton"
+            class="send-button"
+        >
+            Send
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
