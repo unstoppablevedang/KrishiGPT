@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiGPT | AI for Sustainable Agriculture</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f7faf5;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            background: white;
+            padding: 25px 45px;
+            border-bottom: 1px solid #e1e1e1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: bold;
+            color: #176b38;
+        }
+
+        .nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: #4d574f;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .nav a:hover {
+            color: #3c9551;
+        }
+
+        .try-nav {
+            background: #3c9551;
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 14px;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 25px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .plant {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            background: #e5f1e3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 52px;
+            margin: 0 auto 30px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            color: #176b38;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 23px;
+            line-height: 1.55;
+            color: #5d665f;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 16px 30px;
+            background: #3c9551;
+            color: white;
+            text-decoration: none;
+            border-radius: 17px;
+            font-size: 19px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .hero-button:hover {
+            background: #307d43;
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #176b38;
+            font-size: 36px;
+            margin-bottom: 18px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #68726b;
+            font-size: 19px;
+            margin: 0 auto 45px;
+            max-width: 750px;
+            line-height: 1.5;
+        }
+
+        .about-card {
+            background: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 22px;
+            padding: 35px;
+            font-size: 20px;
+            line-height: 1.7;
+            box-shadow: 0 3px 12px rgba(0,0,0,.04);
+        }
+
+        /* HOW TO USE */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,.04);
+        }
+
+        .step-number {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #e5f1e3;
+            color: #176b38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .step h3 {
+            color: #285b34;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: #68726b;
+            line-height: 1.55;
+            font-size: 17px;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 90px 25px 120px;
+        }
+
+        .cta-box {
+            background: #e5f1e3;
+            border-radius: 28px;
+            padding: 55px 30px;
+        }
+
+        .cta h2 {
+            color: #176b38;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #566158;
+            font-size: 19px;
+            margin-bottom: 28px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 28px;
+            background: #3c9551;
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: white;
+            border-top: 1px solid #e1e1e1;
+            text-align: center;
+            padding: 25px;
+            color: #68726b;
+        }
+
+        @media (max-width: 700px) {
+            .header {
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                font-size: 32px;
+            }
+
+            .nav {
+                width: 100%;
+                gap: 15px;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .nav a {
+                font-size: 15px;
+            }
+
+            .hero {
+                min-height: 520px;
+                padding: 60px 20px;
+            }
+
+            .hero p {
+                font-size: 19px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card {
+                font-size: 18px;
+                padding: 25px;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">KrishiGPT</div>
+
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#how-to-use">How to Use</a>
+            <a href="#try" class="try-nav">Try KrishiGPT</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="plant">🌱</div>
+
+                <h1>Smarter Farming.<br>Powered by AI.</h1>
+
+                <p>
+                    KrishiGPT combines AI with real-time weather information
+                    to provide contextual guidance for agriculture and
+                    sustainable farming.
+                </p>
+
+                <a class="hero-button" href="#try">🌱 Try KrishiGPT</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About KrishiGPT</h2>
+            <p class="section-subtitle">
+                An agriculture-focused AI assistant designed to make farming
+                information easier to access and understand.
+            </p>
+
+            <div class="about-card">
+                KrishiGPT is an AI-powered agriculture assistant that helps
+                users ask questions about crops, planting, soil, irrigation,
+                weather and sustainable farming. It combines an open-source
+                AI model with weather information to make responses more
+                relevant to the user's location.
+            </div>
+        </section>
+
+        <section id="how-to-use">
+            <h2 class="section-title">How to Use</h2>
+            <p class="section-subtitle">
+                Getting started with KrishiGPT takes just three simple steps.
+            </p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Enter Your City</h3>
+                    <p>
+                        Provide your city so KrishiGPT can use relevant
+                        weather information.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Ask a Question</h3>
+                    <p>
+                        Ask about crops, soil, irrigation, planting or
+                        sustainable farming.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Get Guidance</h3>
+                    <p>
+                        Receive an AI-generated response using your question
+                        and available weather context.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="try" class="cta">
+            <div class="cta-box">
+                <h2>Ready to explore KrishiGPT?</h2>
+                <p>Ask your agriculture question and start exploring.</p>
+
+                <!-- Replace the URL below with your deployed KrishiGPT chatbot URL -->
+                <a href="https://YOUR-KRISHIGPT-LINK.com">
+                    Try KrishiGPT →
+                </a><br><br>
+                <h2>Want to learn before using?</h2>
+                <p>Using KrishiGPT is so easy that you can't even imagine.</p>
+                <a href="#how-to-use">
+                    Learn to use →
+               </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 KrishiGPT · AI for Agriculture & Rural Development
+    </footer>
+
+</body>
+</html>
